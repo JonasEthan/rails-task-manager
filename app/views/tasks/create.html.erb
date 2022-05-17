@@ -1,0 +1,8 @@
+<h1 class="text-center">Here you can add a new Task to your list</h1>
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+<% end %>
