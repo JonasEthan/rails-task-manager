@@ -3,7 +3,7 @@
   <ul style="list-style: none">
     <% @tasks.each do |task| %>
       <li>
-      <input type="checkbox" name="completed" id="<%=task.id%>" <%= task.completed ? "checked" : "" %>><%= link_to task.title, task_path(task.id)%>
+      <input type="checkbox" name="completed" id="<%=task.id%>" <%= task.completed ? "checked" : "" %>><%= link_to task.title, task_path(task.id)%><%= link_to "Delete", task_path(task.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
       </li>
     <% end %>
   </ul>
