@@ -1,6 +1,6 @@
 <h1 class="text-center">Your Tasks</h1>
 <ul style="list-style: none">
   <% @tasks.each do |task| %>
-    <li><input type="checkbox" name="completed" id="<%=task.id%>"><%= task.title %></li>
+    <li><input type="checkbox" name="completed" id="<%=task.id%>"><%= link_to task.title, this_task_url(task.id)%></li>
   <% end %>
 </ul>

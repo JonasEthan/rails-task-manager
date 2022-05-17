@@ -1,0 +1,15 @@
+<h1 class="text-center"><%= @task.title %></h1>
+<div class="container">
+  <div class="card p-3 bg-secondary">
+    <p class="text-center fw-bolder text-white"><%= @task.details %></p>
+  </div>
+  <% if @task.completed %>
+    <p class="text-start">This task has been completed</p>
+  <% else %>
+    <input type="checkbox" name="completed" id="">
+    <label for="completed">This task has not been completed yet</label>
+  <%end%>
+  <div>
+    <%= link_to "Back to the list", tasks_path %>
+  </div>
+</div>
