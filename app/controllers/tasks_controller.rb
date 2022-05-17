@@ -16,6 +16,13 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+
+    redirect_to tasks_path
+  end
+
   private
 
   def create
@@ -31,14 +38,6 @@ class TasksController < ApplicationController
     @task.update(task_params)
 
     redirect_to task_path(@task.id)
-  end
-
-  def delete
-    @task = Task.find(params[:id])
-    raise
-    @task.delete
-
-    redirect_to tasks_path
   end
 
   def task_params
