@@ -1,0 +1,6 @@
+<h1 class="text-center">Your Tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><input type="checkbox" name="completed" id="<%=task.id%>"><%= task.title %></li>
+  <% end %>
+</ul>
