@@ -1,4 +1,4 @@
-<h1 class="text-center"><%= @task.title %></h1>
+<h1 class="text-center"><%= @task.title %></h1><%= link_to "Edit this task", edit_task_url(params[:id]) %>
 <div class="container">
   <div class="card p-3 bg-secondary">
     <p class="text-center fw-bolder text-white"><%= @task.details %></p>
